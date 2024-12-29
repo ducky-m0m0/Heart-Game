@@ -11,7 +11,7 @@ document.addEventListener("mousemove", (event) => {
 });
 
 function dropHeart() {
-    let heartPosition = Math.random() * (280 - 30);
+    let heartPosition = Math.random() * (300 - 30); // Random horizontal position
     heart.style.left = `${heartPosition}px`;
     heart.style.top = "0px";
     heart.style.visibility = "visible";
@@ -39,8 +39,8 @@ function dropHeart() {
 }
 
 function resetHeart() {
-    heart.style.top = "0px";
-    dropHeart();
+    heart.style.visibility = "hidden"; // Hide the heart
+    setTimeout(dropHeart, 500); // Wait before dropping the next heart
 }
 
 function isCaught() {
@@ -60,4 +60,4 @@ function levelUp() {
     heartSpeed *= 0.9; // Increase speed every level
 }
 
-dropHeart();
+dropHeart(); // Start the first heart drop
