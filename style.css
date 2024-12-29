@@ -33,6 +33,5 @@ body {
     height: 30px;
     background-color: red;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-    top: 0;
-    left: Math.random() * 100%;
+    visibility: hidden; /* Initially hidden */
 }
